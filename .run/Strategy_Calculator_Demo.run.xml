@@ -1,0 +1,8 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Strategy Calculator Demo" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="edu.aitu.strategy.client.CalculatorDemo" />
+    <module name="strategy-calculator" />
+    <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    <method v="2"><option name="Make" enabled="true" /></method>
+  </configuration>
+</component>
