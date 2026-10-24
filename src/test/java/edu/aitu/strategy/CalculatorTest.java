@@ -4,6 +4,7 @@ import edu.aitu.strategy.context.Calculator;
 import edu.aitu.strategy.algorithm.AdditionStrategy;
 import edu.aitu.strategy.algorithm.SubtractionStrategy;
 import edu.aitu.strategy.algorithm.MultiplicationStrategy;
+import edu.aitu.strategy.algorithm.DivisionStrategy;
 import org.junit.jupiter.api.Test;
 import java.math.BigDecimal;
 import static org.junit.jupiter.api.Assertions.*;
@@ -67,5 +68,17 @@ class CalculatorTest {
         BigDecimal result = calculator.calculate(new BigDecimal("2"), new BigDecimal("3"));
 
         assertEquals(new BigDecimal("5"), result);
+    }
+
+    @Test
+    void contextCanSwitchAfterAnAlgorithmRejectsAnOperation() {
+        Calculator calculator = new Calculator(new DivisionStrategy());
+        assertThrows(ArithmeticException.class,
+            () -> calculator.calculate(BigDecimal.ONE, BigDecimal.ZERO));
+        calculator.setStrategy(new AdditionStrategy());
+
+        BigDecimal result = calculator.calculate(BigDecimal.ONE, BigDecimal.ONE);
+
+        assertEquals(new BigDecimal("2"), result);
     }
 }

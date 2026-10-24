@@ -4,6 +4,7 @@ import edu.aitu.strategy.context.Calculator;
 import edu.aitu.strategy.algorithm.AdditionStrategy;
 import edu.aitu.strategy.algorithm.SubtractionStrategy;
 import edu.aitu.strategy.algorithm.MultiplicationStrategy;
+import edu.aitu.strategy.algorithm.DivisionStrategy;
 import java.math.BigDecimal;
 
 /** Composition root: selects strategies and presents results; no arguments are needed. */
@@ -32,7 +33,21 @@ public final class CalculatorDemo {
         showCalculation(calculator, "Multiplication", "20", "4");
         showCalculation(calculator, "Multiplication", "1.25", "0.75");
 
-        System.out.println("\n4. SWITCH BACK: ADDITION");
+        System.out.println("\n4. EXTENSION STRATEGY: DIVISION");
+        calculator.setStrategy(new DivisionStrategy());
+        showCalculation(calculator, "Division", "20", "4");
+        showCalculation(calculator, "Division", "1", "3");
+        System.out.println("Division policy: DECIMAL64, up to 16 significant digits.");
+
+        System.out.println("\n5. EXPECTED ERROR CASE: DIVISION BY ZERO");
+        try {
+            calculator.calculate(BigDecimal.ONE, BigDecimal.ZERO);
+        } catch (ArithmeticException exception) {
+            System.out.println("Rejected as expected: " + exception.getMessage());
+        }
+        showCalculation(calculator, "Division after rejection", "9", "3");
+
+        System.out.println("\n6. SWITCH BACK: ADDITION");
         calculator.setStrategy(new AdditionStrategy());
         showCalculation(calculator, "Addition", "20", "4");
         System.out.println("\nThe same context was reused for every calculation.");
