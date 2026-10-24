@@ -1,0 +1,75 @@
+@startuml
+skinparam classAttributeIconSize 0
+title Strategy Calculator Complete Class Diagram
+class AdditionStrategy <<final>> {
+  + calculate(left: BigDecimal, right: BigDecimal): BigDecimal
+}
+interface CalculationStrategy {
+  {abstract} + calculate(left: BigDecimal, right: BigDecimal): BigDecimal
+}
+class DivisionStrategy <<final>> {
+  + calculate(left: BigDecimal, right: BigDecimal): BigDecimal
+}
+class MultiplicationStrategy <<final>> {
+  + calculate(left: BigDecimal, right: BigDecimal): BigDecimal
+}
+class SubtractionStrategy <<final>> {
+  + calculate(left: BigDecimal, right: BigDecimal): BigDecimal
+}
+class CalculatorDemo <<final>> {
+  - CalculatorDemo()
+  {static} + main(args: String[]): void
+  {static} - showCalculation(calculator: Calculator, operation: String, left: String, right: String): void
+}
+class Calculator <<final>> {
+  - strategy: CalculationStrategy
+  + Calculator(strategy: CalculationStrategy)
+  + setStrategy(strategy: CalculationStrategy): void
+  + calculate(left: BigDecimal, right: BigDecimal): BigDecimal
+}
+class CalculatorTest {
+  ~ constructorRejectsMissingStrategy(): void
+  ~ sameContextSwitchesAlgorithmsAtRuntime(): void
+  ~ customStrategyWorksWithoutContextChanges(): void
+  ~ rejectedReplacementPreservesPreviousStrategy(): void
+  ~ missingLeftOperandIsRejected(): void
+  ~ missingRightOperandIsRejected(): void
+  ~ switchingBackRestoresOriginalAlgorithm(): void
+  ~ contextCanSwitchAfterAnAlgorithmRejectsAnOperation(): void
+}
+class StrategyTest {
+  ~ strategiesProduceExpectedNumbers(strategy: CalculationStrategy, left: String, right: String, expected: String): void
+  {static} ~ calculationCases(): Stream<Arguments>
+  ~ decimalAdditionIsExact(): void
+  ~ algorithmInstanceDoesNotStorePreviousResults(): void
+  ~ divisionRejectsZeroInEveryRepresentation(zero: String): void
+  ~ recurringDivisionUsesTheDocumentedPrecision(): void
+}
+Calculator --> "1" CalculationStrategy : current strategy
+AdditionStrategy ..|> CalculationStrategy
+SubtractionStrategy ..|> CalculationStrategy
+MultiplicationStrategy ..|> CalculationStrategy
+DivisionStrategy ..|> CalculationStrategy
+CalculatorDemo ..> Calculator : uses
+CalculatorDemo ..> AdditionStrategy : uses
+CalculatorDemo ..> SubtractionStrategy : uses
+CalculatorDemo ..> MultiplicationStrategy : uses
+CalculatorDemo ..> DivisionStrategy : uses
+CalculatorTest ..> Calculator : uses
+CalculatorTest ..> CalculationStrategy : uses
+CalculatorTest ..> AdditionStrategy : uses
+CalculatorTest ..> SubtractionStrategy : uses
+CalculatorTest ..> MultiplicationStrategy : uses
+CalculatorTest ..> DivisionStrategy : uses
+StrategyTest ..> CalculationStrategy : uses
+StrategyTest ..> AdditionStrategy : uses
+StrategyTest ..> SubtractionStrategy : uses
+StrategyTest ..> MultiplicationStrategy : uses
+StrategyTest ..> DivisionStrategy : uses
+legend bottom
++ public; - private; ~ package visibility
+Underlined: static; italic: abstract; final classes are marked.
+8 classes + 1 interface. All declared fields, methods and explicit constructors.
+Method parameters are shown; local variables are listed in the source register.
+endlegend
+@enduml

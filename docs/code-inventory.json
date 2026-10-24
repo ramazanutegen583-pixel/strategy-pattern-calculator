@@ -1,0 +1,701 @@
+{
+  "classes": [
+    {
+      "name": "AdditionStrategy",
+      "kind": "CLASS",
+      "package": "edu.aitu.strategy.algorithm",
+      "source": "src/main/java/edu/aitu/strategy/algorithm/AdditionStrategy.java",
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "fields": [],
+      "methods": [
+        {
+          "name": "calculate",
+          "constructor": false,
+          "returnType": "BigDecimal",
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [
+            "@Override"
+          ],
+          "parameters": [
+            {
+              "name": "left",
+              "type": "BigDecimal"
+            },
+            {
+              "name": "right",
+              "type": "BigDecimal"
+            }
+          ],
+          "throws": [],
+          "locals": []
+        }
+      ],
+      "sha256": "7b0aee415e34f18d76ef5e18bd3203eeaf35b9da1aebb29fa71861520149d621"
+    },
+    {
+      "name": "CalculationStrategy",
+      "kind": "INTERFACE",
+      "package": "edu.aitu.strategy.algorithm",
+      "source": "src/main/java/edu/aitu/strategy/algorithm/CalculationStrategy.java",
+      "modifiers": [
+        "public"
+      ],
+      "fields": [],
+      "methods": [
+        {
+          "name": "calculate",
+          "constructor": false,
+          "returnType": "BigDecimal",
+          "modifiers": [
+            "abstract",
+            "public"
+          ],
+          "annotations": [],
+          "parameters": [
+            {
+              "name": "left",
+              "type": "BigDecimal"
+            },
+            {
+              "name": "right",
+              "type": "BigDecimal"
+            }
+          ],
+          "throws": [],
+          "locals": []
+        }
+      ],
+      "sha256": "70f9da4dce072a853871392e6a0b413810669c3467e53652eab5dbae6ae265e1"
+    },
+    {
+      "name": "DivisionStrategy",
+      "kind": "CLASS",
+      "package": "edu.aitu.strategy.algorithm",
+      "source": "src/main/java/edu/aitu/strategy/algorithm/DivisionStrategy.java",
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "fields": [],
+      "methods": [
+        {
+          "name": "calculate",
+          "constructor": false,
+          "returnType": "BigDecimal",
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [
+            "@Override"
+          ],
+          "parameters": [
+            {
+              "name": "left",
+              "type": "BigDecimal"
+            },
+            {
+              "name": "right",
+              "type": "BigDecimal"
+            }
+          ],
+          "throws": [],
+          "locals": []
+        }
+      ],
+      "sha256": "77ad58ac8abcccc918e2ba45141873f38a80f39b1131261096ac41eea67a86ab"
+    },
+    {
+      "name": "MultiplicationStrategy",
+      "kind": "CLASS",
+      "package": "edu.aitu.strategy.algorithm",
+      "source": "src/main/java/edu/aitu/strategy/algorithm/MultiplicationStrategy.java",
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "fields": [],
+      "methods": [
+        {
+          "name": "calculate",
+          "constructor": false,
+          "returnType": "BigDecimal",
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [
+            "@Override"
+          ],
+          "parameters": [
+            {
+              "name": "left",
+              "type": "BigDecimal"
+            },
+            {
+              "name": "right",
+              "type": "BigDecimal"
+            }
+          ],
+          "throws": [],
+          "locals": []
+        }
+      ],
+      "sha256": "4fbf06191c9581b792c6edc73ca6f98d7e94044dcddc0cb52021525b99853e42"
+    },
+    {
+      "name": "SubtractionStrategy",
+      "kind": "CLASS",
+      "package": "edu.aitu.strategy.algorithm",
+      "source": "src/main/java/edu/aitu/strategy/algorithm/SubtractionStrategy.java",
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "fields": [],
+      "methods": [
+        {
+          "name": "calculate",
+          "constructor": false,
+          "returnType": "BigDecimal",
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [
+            "@Override"
+          ],
+          "parameters": [
+            {
+              "name": "left",
+              "type": "BigDecimal"
+            },
+            {
+              "name": "right",
+              "type": "BigDecimal"
+            }
+          ],
+          "throws": [],
+          "locals": []
+        }
+      ],
+      "sha256": "d48489e9d04848d6a2a07ee79cc145eb7689c7005ff3cbb3d6a6ff49b603dcd0"
+    },
+    {
+      "name": "CalculatorDemo",
+      "kind": "CLASS",
+      "package": "edu.aitu.strategy.client",
+      "source": "src/main/java/edu/aitu/strategy/client/CalculatorDemo.java",
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "fields": [],
+      "methods": [
+        {
+          "name": "CalculatorDemo",
+          "constructor": true,
+          "returnType": null,
+          "modifiers": [
+            "private"
+          ],
+          "annotations": [],
+          "parameters": [],
+          "throws": [],
+          "locals": []
+        },
+        {
+          "name": "main",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [
+            "public",
+            "static"
+          ],
+          "annotations": [],
+          "parameters": [
+            {
+              "name": "args",
+              "type": "String[]"
+            }
+          ],
+          "throws": [],
+          "locals": [
+            {
+              "name": "calculator",
+              "type": "Calculator",
+              "line": 20
+            },
+            {
+              "name": "exception",
+              "type": "ArithmeticException",
+              "line": 45
+            }
+          ]
+        },
+        {
+          "name": "showCalculation",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [
+            "private",
+            "static"
+          ],
+          "annotations": [],
+          "parameters": [
+            {
+              "name": "calculator",
+              "type": "Calculator"
+            },
+            {
+              "name": "operation",
+              "type": "String"
+            },
+            {
+              "name": "left",
+              "type": "String"
+            },
+            {
+              "name": "right",
+              "type": "String"
+            }
+          ],
+          "throws": [],
+          "locals": [
+            {
+              "name": "result",
+              "type": "BigDecimal",
+              "line": 59
+            }
+          ]
+        }
+      ],
+      "sha256": "d7865eb1c09bf53559e6daf8822cab276909fc362354e0cb93704c434d7aff06"
+    },
+    {
+      "name": "Calculator",
+      "kind": "CLASS",
+      "package": "edu.aitu.strategy.context",
+      "source": "src/main/java/edu/aitu/strategy/context/Calculator.java",
+      "modifiers": [
+        "public",
+        "final"
+      ],
+      "fields": [
+        {
+          "name": "strategy",
+          "type": "CalculationStrategy",
+          "modifiers": [
+            "private"
+          ],
+          "initializer": null
+        }
+      ],
+      "methods": [
+        {
+          "name": "Calculator",
+          "constructor": true,
+          "returnType": null,
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "parameters": [
+            {
+              "name": "strategy",
+              "type": "CalculationStrategy"
+            }
+          ],
+          "throws": [],
+          "locals": []
+        },
+        {
+          "name": "setStrategy",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "parameters": [
+            {
+              "name": "strategy",
+              "type": "CalculationStrategy"
+            }
+          ],
+          "throws": [],
+          "locals": []
+        },
+        {
+          "name": "calculate",
+          "constructor": false,
+          "returnType": "BigDecimal",
+          "modifiers": [
+            "public"
+          ],
+          "annotations": [],
+          "parameters": [
+            {
+              "name": "left",
+              "type": "BigDecimal"
+            },
+            {
+              "name": "right",
+              "type": "BigDecimal"
+            }
+          ],
+          "throws": [],
+          "locals": []
+        }
+      ],
+      "sha256": "dc55622b80614cee58ce7a04048fe59748098910bbbc77aaa87ed3667882202e"
+    },
+    {
+      "name": "CalculatorTest",
+      "kind": "CLASS",
+      "package": "edu.aitu.strategy",
+      "source": "src/test/java/edu/aitu/strategy/CalculatorTest.java",
+      "modifiers": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "constructorRejectsMissingStrategy",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": []
+        },
+        {
+          "name": "sameContextSwitchesAlgorithmsAtRuntime",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": [
+            {
+              "name": "calculator",
+              "type": "Calculator",
+              "line": 21
+            },
+            {
+              "name": "left",
+              "type": "BigDecimal",
+              "line": 22
+            },
+            {
+              "name": "right",
+              "type": "BigDecimal",
+              "line": 23
+            }
+          ]
+        },
+        {
+          "name": "customStrategyWorksWithoutContextChanges",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": [
+            {
+              "name": "calculator",
+              "type": "Calculator",
+              "line": 34
+            },
+            {
+              "name": "left",
+              "type": "inferred",
+              "line": 34
+            },
+            {
+              "name": "right",
+              "type": "inferred",
+              "line": 34
+            },
+            {
+              "name": "result",
+              "type": "BigDecimal",
+              "line": 36
+            }
+          ]
+        },
+        {
+          "name": "rejectedReplacementPreservesPreviousStrategy",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": [
+            {
+              "name": "calculator",
+              "type": "Calculator",
+              "line": 43
+            }
+          ]
+        },
+        {
+          "name": "missingLeftOperandIsRejected",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": [
+            {
+              "name": "calculator",
+              "type": "Calculator",
+              "line": 52
+            }
+          ]
+        },
+        {
+          "name": "missingRightOperandIsRejected",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": [
+            {
+              "name": "calculator",
+              "type": "Calculator",
+              "line": 58
+            }
+          ]
+        },
+        {
+          "name": "switchingBackRestoresOriginalAlgorithm",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": [
+            {
+              "name": "calculator",
+              "type": "Calculator",
+              "line": 64
+            },
+            {
+              "name": "result",
+              "type": "BigDecimal",
+              "line": 68
+            }
+          ]
+        },
+        {
+          "name": "contextCanSwitchAfterAnAlgorithmRejectsAnOperation",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": [
+            {
+              "name": "calculator",
+              "type": "Calculator",
+              "line": 75
+            },
+            {
+              "name": "result",
+              "type": "BigDecimal",
+              "line": 80
+            }
+          ]
+        }
+      ],
+      "sha256": "e26a9bbe60dc0ba3f30cca370718f817bc0685bc445cb9363fb31dd6c3d18d25"
+    },
+    {
+      "name": "StrategyTest",
+      "kind": "CLASS",
+      "package": "edu.aitu.strategy",
+      "source": "src/test/java/edu/aitu/strategy/StrategyTest.java",
+      "modifiers": [],
+      "fields": [],
+      "methods": [
+        {
+          "name": "strategiesProduceExpectedNumbers",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@ParameterizedTest",
+            "@MethodSource(\"calculationCases\")"
+          ],
+          "parameters": [
+            {
+              "name": "strategy",
+              "type": "CalculationStrategy"
+            },
+            {
+              "name": "left",
+              "type": "String"
+            },
+            {
+              "name": "right",
+              "type": "String"
+            },
+            {
+              "name": "expected",
+              "type": "String"
+            }
+          ],
+          "throws": [],
+          "locals": [
+            {
+              "name": "result",
+              "type": "BigDecimal",
+              "line": 22
+            }
+          ]
+        },
+        {
+          "name": "calculationCases",
+          "constructor": false,
+          "returnType": "Stream<Arguments>",
+          "modifiers": [
+            "static"
+          ],
+          "annotations": [],
+          "parameters": [],
+          "throws": [],
+          "locals": []
+        },
+        {
+          "name": "decimalAdditionIsExact",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": [
+            {
+              "name": "strategy",
+              "type": "CalculationStrategy",
+              "line": 50
+            },
+            {
+              "name": "result",
+              "type": "BigDecimal",
+              "line": 52
+            }
+          ]
+        },
+        {
+          "name": "algorithmInstanceDoesNotStorePreviousResults",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": [
+            {
+              "name": "strategy",
+              "type": "CalculationStrategy",
+              "line": 59
+            },
+            {
+              "name": "result",
+              "type": "BigDecimal",
+              "line": 62
+            }
+          ]
+        },
+        {
+          "name": "divisionRejectsZeroInEveryRepresentation",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@ParameterizedTest",
+            "@ValueSource(strings = {\"0\", \"0.0\", \"0E+3\"})"
+          ],
+          "parameters": [
+            {
+              "name": "zero",
+              "type": "String"
+            }
+          ],
+          "throws": [],
+          "locals": [
+            {
+              "name": "strategy",
+              "type": "CalculationStrategy",
+              "line": 70
+            }
+          ]
+        },
+        {
+          "name": "recurringDivisionUsesTheDocumentedPrecision",
+          "constructor": false,
+          "returnType": "void",
+          "modifiers": [],
+          "annotations": [
+            "@Test"
+          ],
+          "parameters": [],
+          "throws": [],
+          "locals": [
+            {
+              "name": "strategy",
+              "type": "CalculationStrategy",
+              "line": 77
+            },
+            {
+              "name": "result",
+              "type": "BigDecimal",
+              "line": 79
+            }
+          ]
+        }
+      ],
+      "sha256": "6374686c830ca4ea037e13a9ef466c609dbade30a9f1238010989e95b02d1168"
+    }
+  ],
+  "scope": "All authored Java types under src: application classes, strategy interface, and JUnit test classes. External Java/JUnit types and compiler-generated lambda classes are excluded.",
+  "counts": {
+    "classes": 8,
+    "interfaces": 1,
+    "fields": 1,
+    "methods": 23,
+    "explicit_constructors": 2,
+    "locals_and_lambda_parameters": 25
+  }
+}

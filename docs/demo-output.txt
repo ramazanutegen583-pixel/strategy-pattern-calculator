@@ -1,0 +1,62 @@
+============================================================
+CALCULATOR - STRATEGY PATTERN DEMONSTRATION
+One Calculator object; interchangeable arithmetic algorithms.
+The client selects a strategy; the context delegates the work.
+============================================================
+
+1. INITIAL STRATEGY: ADDITION
+Client selected: Addition
+Operands: 20 and 4
+Context action: delegate to the current CalculationStrategy
+Result: 24
+Client selected: Addition
+Operands: 0.1 and 0.2
+Context action: delegate to the current CalculationStrategy
+Result: 0.3
+
+2. RUNTIME SWITCH: SUBTRACTION
+Client selected: Subtraction
+Operands: 20 and 4
+Context action: delegate to the current CalculationStrategy
+Result: 16
+Client selected: Subtraction
+Operands: -8 and 2
+Context action: delegate to the current CalculationStrategy
+Result: -10
+
+3. RUNTIME SWITCH: MULTIPLICATION
+Client selected: Multiplication
+Operands: 20 and 4
+Context action: delegate to the current CalculationStrategy
+Result: 80
+Client selected: Multiplication
+Operands: 1.25 and 0.75
+Context action: delegate to the current CalculationStrategy
+Result: 0.9375
+
+4. EXTENSION STRATEGY: DIVISION
+Client selected: Division
+Operands: 20 and 4
+Context action: delegate to the current CalculationStrategy
+Result: 5
+Client selected: Division
+Operands: 1 and 3
+Context action: delegate to the current CalculationStrategy
+Result: 0.3333333333333333
+Division policy: DECIMAL64, up to 16 significant digits.
+
+5. EXPECTED ERROR CASE: DIVISION BY ZERO
+Rejected as expected: Division by zero
+Client selected: Division after rejection
+Operands: 9 and 3
+Context action: delegate to the current CalculationStrategy
+Result: 3
+
+6. SWITCH BACK: ADDITION
+Client selected: Addition
+Operands: 20 and 4
+Context action: delegate to the current CalculationStrategy
+Result: 24
+
+The same context was reused for every calculation.
+DEMONSTRATION COMPLETED SUCCESSFULLY
