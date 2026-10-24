@@ -12,7 +12,7 @@ The implementation uses the assignment's suggested **Option B Calculator**.
 | No selection branches in Context | Calculator contains no if, switch, instanceof, ternary, or concrete strategy names |
 | Client selects and configures strategies | CalculatorDemo is the composition root |
 | Extensibility | Division added in a separate commit without modifying Context, interface, or original strategies |
-| At least five Clean Code applications | Seven annotated examples from Chapters 9, 10, and 11 in the report |
+| At least five Clean Code applications | Five annotated examples from Chapters 9, 10, and 11 in the report |
 | Chapter 9 | Readable tests and independent, repeatable fixtures |
 | Chapter 10 | Focused responsibilities, organizing for change, isolation from concrete classes |
 | Chapter 11 | Separate construction from use; injection supports isolated context testing |

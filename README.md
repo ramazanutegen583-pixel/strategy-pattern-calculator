@@ -46,7 +46,7 @@ The context validates non-null inputs. Strategies operate on BigDecimal values. 
 - [Validation results](docs/validation.md) and [requirements checklist](docs/requirements-checklist.md).
 - [Simple English defense notes](docs/defense-notes.md).
 
-The Clean Code section applies Chapters **9 Unit Tests**, **10 Classes**, and **11 Systems**. Each of seven applications includes an annotated implementation excerpt.
+The Clean Code section applies Chapters **9 Unit Tests**, **10 Classes**, and **11 Systems**. Each of five applications includes an annotated implementation excerpt.
 
 ## Complete UML
 
